@@ -807,6 +807,7 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
         onameMBeanFactory = register(factory, "type=MBeanFactory");
 
         // Register the naming resources
+        //这里
         globalNamingResources.init();
 
         // Populate the extension validator with JARs from common and shared
@@ -838,6 +839,7 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
             }
         }
         // Initialize our defined Services
+        //services多层
         for (int i = 0; i < services.length; i++) {
             services[i].init();
         }

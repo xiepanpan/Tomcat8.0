@@ -247,6 +247,7 @@ public class Catalina {
 
     /**
      * Return a File object representing our configuration file.
+     *  读取server.xml配置文件
      */
     protected File configFile() {
 
@@ -548,6 +549,7 @@ public class Catalina {
         try {
             inputSource.setByteStream(inputStream);
             digester.push(this);
+            //解析
             digester.parse(inputSource);
         } catch (SAXParseException spe) {
             log.warn("Catalina.start using " + getConfigFile() + ": " +

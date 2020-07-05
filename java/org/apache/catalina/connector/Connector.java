@@ -935,6 +935,7 @@ public class Connector extends LifecycleMBeanBase  {
     }
 
 
+    //这里
     @Override
     protected void initInternal() throws LifecycleException {
 
@@ -957,6 +958,7 @@ public class Connector extends LifecycleMBeanBase  {
         }
 
         try {
+            //这里
             protocolHandler.init();
         } catch (Exception e) {
             throw new LifecycleException

@@ -865,6 +865,7 @@ public class StandardHost extends ContainerBase implements Host {
                         errorValve), t);
             }
         }
+        //这里
         super.startInternal();
     }
 

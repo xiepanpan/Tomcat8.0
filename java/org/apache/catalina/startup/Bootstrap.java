@@ -291,6 +291,7 @@ public final class Bootstrap {
         throws Exception {
 
         // Call the load() method
+        //通过反射调用 Catalina.load()
         String methodName = "load";
         Object param[];
         Class<?> paramTypes[];
@@ -474,7 +475,9 @@ public final class Bootstrap {
 
             if (command.equals("startd")) {
                 args[args.length - 1] = "start";
+                //加载
                 daemon.load(args);
+                //启动
                 daemon.start();
             } else if (command.equals("stopd")) {
                 args[args.length - 1] = "stop";
